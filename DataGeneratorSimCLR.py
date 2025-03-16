@@ -115,4 +115,5 @@ class DataGeneratorSimCLR(data_utils.Sequence):
 
         # [None] is used to silence warning
         # https://stackoverflow.com/questions/59317919/warningtensorflowsample-weight-modes-were-coerced-from-to
-        return list(X), y, [None]
+        # return list(X), y, [None]
+        return list(X), y
