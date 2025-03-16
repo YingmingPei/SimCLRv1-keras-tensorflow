@@ -9,7 +9,7 @@ from tensorflow.keras.callbacks import (
     ReduceLROnPlateau,
 )
 # from keras.utils.layer_utils import count_params
-from tensorflow.keras.utils import count_params
+# from tensorflow.keras.utils import count_params
 
 from datetime import datetime
 
@@ -226,8 +226,8 @@ class SimCLR:
         """ Function to print (non)-learnable weights
             Helps checking unfreezing process
         """
-        trainable_count = count_params(self.SimCLR_model.trainable_weights)
-        non_trainable_count = count_params(
+        trainable_count = K.count_params(self.SimCLR_model.trainable_weights)
+        non_trainable_count = K.count_params(
             self.SimCLR_model.non_trainable_weights
         )
 
