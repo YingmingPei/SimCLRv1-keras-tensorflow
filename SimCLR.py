@@ -8,7 +8,8 @@ from tensorflow.keras.callbacks import (
     EarlyStopping,
     ReduceLROnPlateau,
 )
-from keras.utils.layer_utils import count_params
+# from keras.utils.layer_utils import count_params
+from tensorflow.keras.utils import count_params
 
 from datetime import datetime
 
