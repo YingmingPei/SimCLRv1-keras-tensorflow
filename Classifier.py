@@ -8,7 +8,7 @@ from tensorflow.keras.callbacks import (
     EarlyStopping,
     ReduceLROnPlateau,
 )
-from keras.utils.layer_utils import count_params
+# from keras.utils.layer_utils import count_params
 from sklearn.metrics import classification_report
 import numpy as np
 
@@ -133,10 +133,10 @@ class Classifier:
             layer.trainable = True
 
         if pr:
-            trainable_count = count_params(
+            trainable_count = K.count_params(
                 self.classifier_model.trainable_weights
             )
-            non_trainable_count = count_params(
+            non_trainable_count = K.count_params(
                 self.classifier_model.non_trainable_weights
             )
 
